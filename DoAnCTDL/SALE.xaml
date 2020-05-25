@@ -1,0 +1,167 @@
+﻿<Window x:Class="DoAnCTDL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnCTDL"
+        mc:Ignorable="d"
+        Title="SALE" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="569" Margin="-4,0" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="6">
+            <TabItem Header="Bán hàng" Width="150" FontSize="20" Foreground="Blue" FontWeight="Bold">
+                <Grid Background="Lavender">
+                    <Label Content="BÁN HÀNG" Foreground="Red" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="386,16,0,0" VerticalAlignment="Top" Width="209" />
+                    <GroupBox Header="Sản phẩm" Margin="45,66,560,335">
+                        <UniformGrid Rows="2" Columns="2">
+                            <Label Content="Tên sản phẩm">
+                            </Label>
+                            <ComboBox Margin="0,6,0,9"></ComboBox>
+                            <Label Content="Số lượng"></Label>
+                            <ComboBox Margin="0,1,0,11"></ComboBox>
+                        </UniformGrid>
+
+
+                    </GroupBox>
+                    <GroupBox Header="Khách hàng" Margin="534,66,71,330">
+                        <UniformGrid Rows="2" Columns="2">
+                            <Label Content="Tên khách hàng">
+                            </Label>
+                            <TextBox Margin="0,6,0,9"></TextBox>
+                            <Label Content="Số điện thoại"></Label>
+                            <TextBox Margin="0,1,0,11"></TextBox>
+                        </UniformGrid>
+
+
+                    </GroupBox>
+                    <Label Content="Nhân viên" HorizontalAlignment="Left" Margin="49,201,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="238,206,0,0" VerticalAlignment="Top" Width="196"/>
+                    <Button Content="Thêm vào giỏ hàng" HorizontalAlignment="Left" Margin="542,227,0,0" VerticalAlignment="Top" Width="212"/>
+                    <ListView HorizontalAlignment="Left" Height="193" Margin="49,282,0,0" VerticalAlignment="Top" Width="895">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Tên" Width="200"/>
+                                <GridViewColumn Header="Số lượng" Width="200"/>
+                                <GridViewColumn Header="Đơn giá" Width="200"/>
+                                <GridViewColumn Header="Thành tiền" Width="200"/>
+                            </GridView>
+                        </ListView.View>
+
+
+                    </ListView>
+                    <Button Content="Thanh toán" HorizontalAlignment="Left" Margin="798,485,0,0" VerticalAlignment="Top" Width="145"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Sản phẩm" Width="150" FontSize="20" Foreground="Blue" FontWeight="Bold">
+                <Grid Background="Cornsilk">
+                    <Label Content="SẢN PHẨM" Foreground="Red" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="392,16,0,0" VerticalAlignment="Top" Width="209" />
+                    <Label Content="Tên sản phẩm" HorizontalAlignment="Left" Margin="38,128,0,0" VerticalAlignment="Top" Width="138"/>
+                    <TextBox HorizontalAlignment="Left" Height="37" Margin="181,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260"/>
+                    <Label Content="Mã sản phẩm" HorizontalAlignment="Left" Margin="38,72,0,0" VerticalAlignment="Top" Width="138"/>
+                    <TextBox HorizontalAlignment="Left" Height="37" Margin="181,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260"/>
+                    <Label Content="Hãng" HorizontalAlignment="Left" Margin="38,190,0,0" VerticalAlignment="Top" Width="86"/>
+                    <TextBox HorizontalAlignment="Left" Height="37" Margin="181,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260"/>
+                    <Label Content="Số lượng" HorizontalAlignment="Left" Margin="530,70,0,0" VerticalAlignment="Top" Width="138"/>
+                    <TextBox HorizontalAlignment="Left" Height="37" Margin="673,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260"/>
+                    <Label Content="Giá" HorizontalAlignment="Left" Margin="530,136,0,0" VerticalAlignment="Top" Width="86"/>
+                    <TextBox HorizontalAlignment="Left" Height="37" Margin="673,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="260"/>
+                    <Label Content="Ngày nhập" HorizontalAlignment="Left" Margin="530,194,0,0" VerticalAlignment="Top" Width="138"/>
+                    <DatePicker Height="37" Margin="673,190,61,303" SelectedDateFormat="Short" Cursor="None" IsTodayHighlighted="True"/>
+                    <Button Content="Thêm sản phẩm" HorizontalAlignment="Left" Margin="146,248,0,0" VerticalAlignment="Top" Width="170"/>
+                    <Button Content="Sửa sản phẩm" HorizontalAlignment="Left" Margin="388,250,0,0" VerticalAlignment="Top" Width="170"/>
+                    <Button Content="Xóa sản phẩm" HorizontalAlignment="Left" Margin="638,248,0,0" VerticalAlignment="Top" Width="170"/>
+                    <Label Content="Sắp xếp sản phẩm theo thứ tự:" HorizontalAlignment="Left" Margin="38,291,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="392,297,0,0" VerticalAlignment="Top" Width="224"/>
+                    <Button Content="Sắp xếp" HorizontalAlignment="Left" Margin="673,299,0,0" VerticalAlignment="Top" Width="108"/>
+                    <ListView HorizontalAlignment="Left" Height="160" Margin="49,360,0,0" VerticalAlignment="Top" Width="909">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Mã" Width="150"/>
+                                <GridViewColumn Header="Tên" Width="150"/>
+                                <GridViewColumn Header="Hãng" Width="150"/>
+                                <GridViewColumn Header="Số lượng" Width="150"/>
+                                <GridViewColumn Header="Giá" Width="150"/>
+                                <GridViewColumn Header="Ngày nhập" Width="150"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Khách hàng" Width="150" FontSize="20" Foreground="Blue" FontWeight="Bold">
+                <Grid Background="Khaki" Margin="-4,0,2,1">
+                    <Label Content="DANH SÁCH KHÁCH HÀNG" Foreground="Red" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="292,16,0,0" VerticalAlignment="Top" Width="411" />
+                    <Label Content="Mã khách hàng" HorizontalAlignment="Left" Margin="97,72,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="32" Margin="292,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204"/>
+                    <Label Content="Tên khách hàng" HorizontalAlignment="Left" Margin="97,124,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="32" Margin="292,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204"/>
+                    <Label Content="Ngày sinh" HorizontalAlignment="Left" Margin="523,72,0,0" VerticalAlignment="Top"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="671,73,0,0" VerticalAlignment="Top" Width="219"/>
+                    <Label Content="Số điện thoại" HorizontalAlignment="Left" Margin="523,114,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="37" Margin="671,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219"/>
+                    <Button Content="Thêm " HorizontalAlignment="Left" Margin="97,190,0,0" VerticalAlignment="Top" Width="137"/>
+                    <Button Content="Làm mới " HorizontalAlignment="Left" Margin="302,190,0,0" VerticalAlignment="Top" Width="155"/>
+                    <Button Content="Sửa" HorizontalAlignment="Left" Margin="535,190,0,0" VerticalAlignment="Top" Width="137"/>
+                    <Button Content="Xóa" HorizontalAlignment="Left" Margin="759,190,0,0" VerticalAlignment="Top" Width="137"/>
+                    <ListView HorizontalAlignment="Left" Height="248" Margin="67,271,0,0" VerticalAlignment="Top" Width="870">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Mã" Width="200"/>
+                                <GridViewColumn Header="Tên" Width="200"/>
+                                <GridViewColumn Header="Ngày sinh" Width="200"/>
+                                <GridViewColumn Header="Số điện thoại" Width="200"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Nhân viên" Width="150" FontSize="20" Foreground="Blue" FontWeight="Bold">
+                <Grid Background="PaleGreen">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="431*"/>
+                        <ColumnDefinition Width="563*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="DANH SÁCH NHÂN VIÊN" Foreground="Red" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Margin="292,16,0,0" VerticalAlignment="Top" Width="411" Grid.ColumnSpan="2" />
+                    <Label Content="Mã nhân viên" HorizontalAlignment="Left" Margin="97,72,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="32" Margin="292,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+                    <Label Content="Tên nhân viên" HorizontalAlignment="Left" Margin="97,124,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="32" Margin="292,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+                    <Label Content="Ngày sinh" HorizontalAlignment="Left" Margin="115,72,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="263,73,0,0" VerticalAlignment="Top" Width="219" Grid.Column="1"/>
+                    <Label Content="Số điện thoại" HorizontalAlignment="Left" Margin="115,122,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Height="37" Margin="263,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Grid.Column="1"/>
+                    <Button Content="Thêm " HorizontalAlignment="Left" Margin="219,278,0,0" VerticalAlignment="Top" Width="137"/>
+                    <Button Content="Sửa" HorizontalAlignment="Left" Margin="19,278,0,0" VerticalAlignment="Top" Width="137" Grid.Column="1"/>
+                    <Button Content="Xóa" HorizontalAlignment="Left" Margin="261,278,0,0" VerticalAlignment="Top" Width="137" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Height="32" Margin="263,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Grid.Column="1"/>
+                    <Label Content="Giới tính" HorizontalAlignment="Left" Margin="97,170,0,0" VerticalAlignment="Top"/>
+                    <Label Content="CMND" HorizontalAlignment="Left" Margin="113,170,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="292,179,0,0" VerticalAlignment="Top" Width="204" Height="28" Grid.ColumnSpan="2"/>
+                    <Label Content="Địa chỉ" HorizontalAlignment="Left" Margin="97,220,0,0" VerticalAlignment="Top" Width="91"/>
+                    <TextBox HorizontalAlignment="Left" Height="32" Margin="292,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+                    <ListView HorizontalAlignment="Left" Height="187" Margin="38,333,0,0" VerticalAlignment="Top" Width="916" Grid.ColumnSpan="2">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Mã" Width="100"/>
+                                <GridViewColumn Header="Tên" Width="150"/>
+                                <GridViewColumn Header="Giới tính" Width="100"/>
+                                <GridViewColumn Header="Địa chỉ" Width="150"/>
+                                <GridViewColumn Header="Ngày sinh" Width="150"/>
+                                <GridViewColumn Header="Số điện thoại" Width="150"/>
+                                <GridViewColumn Header="CMND" Width="100"/>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tìm kiếm" Width="150" FontSize="20" Foreground="Blue" FontWeight="Bold">
+                <Grid Background="Turquoise"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
